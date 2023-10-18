@@ -1,8 +1,9 @@
 ---
 - name: install initial packages on all boxes
-  hosts: servers
-  #remote_user: ansible 
-  become: yes
+  hosts: all
+  remote_user: ec2-user 
+  become: 'yes'
+  become_user: root
   
   tasks:
     - name: install chrony
@@ -24,3 +25,4 @@
         enabled: yes
 
 
+C:\Users\dave0\OneDrive\Documents\GitHub\ANSIBLE\NTP\master.yml
